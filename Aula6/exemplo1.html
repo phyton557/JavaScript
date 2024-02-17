@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 1 aula 6</title>
+    <script>
+        "use strict";
+        function calculo(){
+        let nota1 = parseFloat(document.getElementById('nota1').value);
+        let nota2 = parseFloat(document.getElementById('nota2').value);
+        let nota3 = parseFloat(document.getElementById('nota3').value);
+        let nota4 = parseFloat(document.getElementById('nota4').value);
+        document.getElementById('media').setAttribute("value", (nota1+nota2+nota3+nota4)/4);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <p>
+            <label for="nota1">1°Nota:</label>
+            <input type="number" id="nota1" value="" max="10" autofocus> 
+        </p>
+        <p>
+            <label for="nota2">2°Nota:</label>
+            <input type="number" id="nota2" value="" max="10"> 
+        </p>
+        <p>
+            <label for="nota3">3°Nota:</label>
+            <input type="number" id="nota3" value="" max="10"> 
+        </p>
+        <p>
+            <label for="nota4">4°Nota:</label>
+            <input type="number" id="nota4" value="" max="10"> 
+        </p>
+        <p>
+            <input type="button"
+           onclick="javascript:calculo();"
+           value="Calcular média">
+           <input type="number" id="media" value="" readonly>
+        </p>
+        <p>
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    
+</body>
+</html>

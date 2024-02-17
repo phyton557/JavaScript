@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculo IMC</title>
+    <script>
+        "use strict";
+        function calcularImc() {
+            let peso = parseFloat(document.getElementById('peso').value);
+            let altura = parseFloat(document.getElementById('altura').value);
+            let imc = (peso / (altura ** 2));
+            let classificacao = null;
+            //document.getElementById('imc').setAttribute("value", imc);
+
+            if (imc > 40) {s
+                classificacao = "Você tem obesidade mórbida";
+            } else if (imc >= 35) {
+                classificacao = "Você tem obesidade severa";
+            } else if (imc >= 30) {
+                classificacao = "Você tem obesidade grau I";
+            } else if (imc >= 25) {
+                classificacao = "Você tem sobrepeso";
+            } else if (imc >= 20) {
+                classificacao = "Você está no peso ideal";
+            } else {
+                classificacao = "Você está abaixo do peso";
+            }
+            document.getElementById('resultado').setAttribute("value", "IMC: " + imc + " - " +classificacao);
+        }            
+    </script>
+</head>
+<body>
+    <h1>Aula 7 - Cálculo o IMC</h1>
+    <form>
+        <p>
+            <label for="peso">Peso: </label>
+            <input type="number" id="peso" size="5" autofocus>
+        </p>
+        <p>
+            <label for="altura">Altura: </label>
+            <input type="number" id="altura" size="5" autofocus>
+        </p>
+        <br>
+        <p>
+            <input type="button" onclick="calcularImc();" value="Calcular IMC">
+        </p>
+        <p>
+            <label for="resultado">Resultado: </label>
+            <input type="text" id="resultado" value="" readonly size="50">
+    </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If...else encadeados</title>
+    <script>
+        let data_hora = new Date();
+        let horas = data_hora.getHours();
+        let minutos = data_hora.getMinutes();
+        let previsao_tempo = "chuvoso"
+
+        document.write(`<p>São às ${horas}:${minutos}</p>`);
+
+        if (horas <12)  
+        {
+        alert("Bom dia...");
+        if (previsao_tempo == "chuvoso")
+        {
+            alert("está chovendo, leve o guarda chuva")
+        }
+        }
+        else if (horas >= 12 && horas < 18) 
+        {
+        alert("Boa tarde...");
+        }
+        else alert("Boa noite...");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
